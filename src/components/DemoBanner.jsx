@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { createPortal } from 'react-dom';
 
 const STORAGE_KEY = 'alpha-demo-banner-dismissed';
 
@@ -21,7 +20,7 @@ export default function DemoBanner() {
 
   if (!mounted || dismissed) return null;
 
-  const banner = (
+  return (
     <div
       role="alert"
       aria-live="polite"
@@ -65,6 +64,4 @@ export default function DemoBanner() {
       </button>
     </div>
   );
-
-  return createPortal(banner, document.body);
 }
