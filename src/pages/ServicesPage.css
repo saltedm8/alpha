@@ -95,12 +95,15 @@
 /* Specialist area tiles with description */
 .flow-spec-tile-with-desc .flow-spec-caption {
   padding: 1.25rem 1.75rem;
-  height: 7.5rem;
-  min-height: unset;
+  min-height: 11rem;
+  height: auto;
 }
 
 .flow-spec-tile-with-desc .flow-spec-desc {
-  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   font-size: 0.8125rem;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.9);

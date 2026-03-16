@@ -88,7 +88,7 @@ export default function ServicesPage() {
           {specialistAreas.map((area, i) => {
             const slug = serviceSlug(area.title);
             const svc = servicesContent[slug];
-            const short = svc?.short?.slice(0, 120) + (svc?.short?.length > 120 ? '…' : '');
+            const short = svc?.short?.slice(0, 200) + (svc?.short?.length > 200 ? '…' : '');
             return (
               <motion.div
                 key={area.title}
