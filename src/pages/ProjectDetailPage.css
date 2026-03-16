@@ -1,0 +1,204 @@
+.flow-project-head-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.flow-project-head-row .flow-head {
+  margin: 0;
+}
+
+.flow-project-head-row .save-project-btn {
+  padding: 0.4rem;
+  border: none;
+  background: var(--color-bg-alt);
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.flow-project-head-row .save-project-btn:hover {
+  color: var(--color-accent);
+}
+
+.flow-project-head-row .save-project-btn.saved {
+  color: var(--color-accent);
+}
+
+.flow-project-detail-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.flow-project-detail .flow-lead {
+  margin-bottom: 2rem;
+}
+
+.flow-project-location {
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.flow-project-back {
+  margin-top: 2rem;
+}
+
+.flow-project-back a {
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.flow-project-back a:hover {
+  color: var(--color-accent-teal);
+}
+
+.flow-project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .flow-project-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+.flow-project-gallery-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.flow-project-gallery-item:hover .flow-project-gallery-expand,
+.flow-project-gallery-item:focus .flow-project-gallery-expand {
+  opacity: 1;
+}
+
+.flow-project-gallery-item .optimized-img-wrap,
+.flow-project-gallery-item img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.flow-project-gallery-item:hover img {
+  transform: scale(1.02);
+}
+
+.flow-project-gallery-expand {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 2rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Lightbox */
+.flow-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.flow-lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: background 0.2s;
+}
+
+.flow-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.flow-lightbox-prev,
+.flow-lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.flow-lightbox-prev {
+  left: 1rem;
+}
+
+.flow-lightbox-next {
+  right: 1rem;
+}
+
+.flow-lightbox-prev:hover,
+.flow-lightbox-next:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.flow-lightbox-content {
+  max-width: 90vw;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flow-lightbox-content img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.flow-lightbox-counter {
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}

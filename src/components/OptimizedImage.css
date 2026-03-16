@@ -1,0 +1,36 @@
+.optimized-img-wrap {
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg-alt);
+}
+
+.optimized-img-wrap.ratio-4-3 {
+  aspect-ratio: 4/3;
+}
+
+.optimized-img-wrap.ratio-3-4 {
+  aspect-ratio: 3/4;
+}
+
+.optimized-img-wrap.ratio-4-5 {
+  aspect-ratio: 4/5;
+}
+
+.optimized-img-wrap.loaded {
+  background: transparent;
+}
+
+.optimized-img-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.optimized-img-wrap.loaded img {
+  opacity: 1;
+}

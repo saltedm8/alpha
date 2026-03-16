@@ -1,0 +1,353 @@
+/* Contact - flow design */
+.flow-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flow-contact-form input,
+.flow-contact-form select,
+.flow-contact-form textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  border: 2px solid var(--color-border);
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.flow-contact-form input:focus,
+.flow-contact-form select:focus,
+.flow-contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.flow-contact-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.flow-contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.flow-office-tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.flow-office-tab-list {
+  display: flex;
+  gap: 0;
+  margin-bottom: 0;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.flow-office-tab {
+  padding: 0.875rem 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: var(--color-bg-alt);
+  border: 2px solid var(--color-border);
+  border-bottom: none;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+
+.flow-office-tab:hover {
+  color: var(--color-text);
+}
+
+.flow-office-tab.active {
+  color: var(--color-accent);
+  background: #fff;
+  border-color: var(--color-border);
+  position: relative;
+  z-index: 1;
+}
+
+.flow-office-card {
+  padding: 2rem;
+  border: 2px solid var(--color-border);
+  border-top: none;
+  margin-top: -2px;
+  background: #fff;
+}
+
+
+.flow-office-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+.flow-office-card .address {
+  margin: 0 0 1rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.flow-office-card .flow-office-actions + .flow-office-details {
+  margin-top: 1rem;
+}
+
+.flow-office-card p,
+.flow-office-card a {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: 0 0 0.5rem;
+  display: block;
+}
+
+.flow-office-card a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.flow-office-card a:hover {
+  color: var(--color-accent-teal);
+}
+
+.flow-contact-social {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.flow-contact-social h4 {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin: 0 0 1rem;
+}
+
+.flow-contact-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.flow-contact-social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.flow-contact-social-links a:hover {
+  color: var(--color-accent-teal);
+}
+
+.flow-contact-social-links svg {
+  width: 20px;
+  height: 20px;
+}
+
+.flow-office-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.flow-office-actions a {
+  font-size: 0.9375rem;
+}
+
+.flow-office-details {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.flow-office-details summary {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  cursor: pointer;
+  list-style: none;
+}
+
+.flow-office-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.flow-office-details summary::after {
+  content: ' +';
+  font-weight: 400;
+}
+
+.flow-office-details[open] summary::after {
+  content: ' −';
+}
+
+.flow-office-details p {
+  margin: 0.5rem 0 0;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.flow-map-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.flow-map-link:hover {
+  color: var(--color-accent-teal);
+}
+
+.flow-office-card .btn {
+  margin-top: 1rem;
+}
+
+.flow-faq {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--color-border);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flow-faq-details {
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0 1.5rem;
+  background: var(--color-bg-alt);
+}
+
+.flow-faq-summary {
+  padding: 1.25rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  color: var(--color-text);
+}
+
+.flow-faq-summary::-webkit-details-marker {
+  display: none;
+}
+
+.flow-faq-summary::after {
+  content: ' +';
+  float: right;
+  color: var(--color-accent);
+  font-weight: 400;
+}
+
+.flow-faq-details[open] .flow-faq-summary::after {
+  content: ' −';
+}
+
+.flow-faq-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .flow-faq-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.flow-faq-item {
+  background: #fff;
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.flow-faq-item:hover {
+  border-color: rgba(196, 92, 38, 0.3);
+}
+
+.flow-faq-item[open] {
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 12px rgba(196, 92, 38, 0.08);
+}
+
+.flow-faq-item summary {
+  padding: 1.25rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: background 0.2s;
+}
+
+.flow-faq-item summary:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.flow-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.flow-faq-item summary::after {
+  content: '+';
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--color-accent);
+  background: rgba(196, 92, 38, 0.1);
+  border-radius: 50%;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.flow-faq-item[open] summary::after {
+  content: '−';
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.flow-faq-item p {
+  padding: 1rem 1.5rem 1.5rem;
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 1024px) {
+  .flow-contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

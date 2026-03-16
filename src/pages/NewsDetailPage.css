@@ -1,0 +1,36 @@
+.flow-news-detail-content {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.flow-news-body p:first-child {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.flow-news-detail .flow-lead {
+  margin-bottom: 2rem;
+}
+
+.flow-news-body p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin: 0 0 1.5rem;
+}
+
+.flow-news-body p:last-child {
+  margin-bottom: 0;
+}
+
+.flow-news-detail .flow-project-back a {
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.flow-news-detail .flow-project-back a:hover {
+  color: var(--color-accent-teal);
+}

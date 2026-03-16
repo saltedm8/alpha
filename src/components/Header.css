@@ -1,0 +1,250 @@
+/* Delcon-inspired: minimal, clean, "Open menu" / "Contact" */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.5rem 0;
+  background: #fff;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-link {
+  flex-shrink: 0;
+}
+
+.header-logo {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  background: #fff;
+}
+
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  opacity: 0.7;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 0.5rem 0;
+  min-width: 180px;
+  border: 1px solid var(--color-border);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.dropdown-menu a:hover {
+  background: var(--color-bg-alt);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-search-btn {
+  padding: 0.35rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-saved-link {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.header-saved-link:hover {
+  color: var(--color-accent);
+}
+
+.header-search-btn:hover {
+  color: var(--color-accent);
+}
+
+.header-phone {
+  font-size: 0.875rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.header-contact-link {
+  font-size: 0.875rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text);
+  padding: 0;
+}
+
+@media (max-width: 1024px) {
+  .nav-desktop,
+  .header-right {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+
+.menu-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 998;
+}
+
+@media (max-width: 1024px) {
+  .menu-overlay {
+    display: block;
+  }
+}
+
+.menu-panel {
+  display: none;
+  position: fixed;
+  top: 65px;
+  left: 1.5rem;
+  right: 1.5rem;
+  background: #fff;
+  z-index: 999;
+  border: 1px solid var(--color-border);
+}
+
+@media (max-width: 1024px) {
+  .menu-panel {
+    display: block;
+  }
+}
+
+.menu-panel-inner {
+  padding: 1.5rem;
+}
+
+.menu-search-btn {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-alt);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  text-align: left;
+}
+
+.menu-search-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.menu-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.menu-item a {
+  display: block;
+  padding: 1rem 0;
+  font-size: 1rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.menu-item a.sub {
+  padding: 0.5rem 0 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.menu-footer {
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.menu-footer a {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.menu-footer a:hover {
+  color: var(--color-accent);
+}
+
+.menu-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.menu-social a {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.menu-social a:hover {
+  color: var(--color-accent-teal);
+}

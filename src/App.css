@@ -1,0 +1,9 @@
+.app {
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.page-loading {
+  min-height: 50vh;
+}

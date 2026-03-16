@@ -1,0 +1,77 @@
+.flow-saved-projects {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.flow-saved-empty {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.flow-saved-empty p {
+  margin: 0 0 1.5rem;
+  color: var(--color-text-muted);
+}
+
+.flow-saved-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.flow-saved-card {
+  position: relative;
+  border: 2px solid var(--color-border);
+  overflow: hidden;
+  background: #fff;
+}
+
+.flow-saved-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.flow-saved-card-link img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+
+.flow-saved-card-link span {
+  display: block;
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.flow-saved-card-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.35rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, background 0.2s;
+}
+
+.flow-saved-card-btn:hover {
+  background: #fff;
+  color: var(--color-accent);
+}
+
+.flow-saved-card-btn.saved {
+  color: var(--color-accent);
+}
+
+.flow-saved-card-btn.saved:hover {
+  color: var(--color-accent-teal);
+}
