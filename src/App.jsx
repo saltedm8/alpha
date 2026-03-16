@@ -2,6 +2,7 @@ import { lazy, Suspense, useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
+import DemoBanner from './components/DemoBanner';
 import Footer from './components/Footer';
 import SearchModal from './components/SearchModal';
 import { SavedProjectsProvider } from './context/SavedProjectsContext';
@@ -40,6 +41,7 @@ export default function App() {
       <SavedProjectsProvider>
       <ScrollToTop />
       <div className="app">
+        <DemoBanner />
         <Header onSearchClick={() => setSearchOpen(true)} />
         <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
         <Suspense fallback={<PageFallback />}>
